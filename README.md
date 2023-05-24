@@ -6,7 +6,7 @@ This example creates an AWS Transfer Family Server and an User.  Only supports S
 * Run the following on your command window to create Private and Public Certs: `sftpuser` and `sftpuser.pub`
   * `ssh-keygen -t rsa -b 4096 -f sftpuser`
 * Once you have the certs, get the content of the `sftpuser.pub` and we will have to add it to AWS SSM Parameter Store.
-* Log into AWS Console.  Go to AWS SSM Parameter Store and add the Public Key under this name: `sftpUserPublicKey'
+* Log into AWS Console.  Go to AWS SSM Parameter Store and add the Public Key under this name: `sftpUserPublicKey`
 * Now, Run the pipeline. Wait for the pipeline to finish.  The server will be created.
 * Log into AWS Console. Go to AWS Transfer Family, Find your server and click on it. Click on the sftpuser under Users. Then in the SSH Public Keys section, verify your public key.
   * ![image](sftp-user-public-key.PNG "Verify SSH Public Key")  
